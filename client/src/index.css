@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT MODE - Odonto Ramalho Theme */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+  
+  /* Background & Foreground - Neutral warm tones */
+  --background: 20 15% 97%;
+  --foreground: 0 0% 15%;
+  
+  /* Border */
+  --border: 20 10% 88%;
+  
+  /* Card */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --card-border: 20 10% 90%;
+  
+  /* Sidebar - Light neutral with wine accent */
+  --sidebar: 20 10% 96%;
+  --sidebar-foreground: 0 0% 15%;
+  --sidebar-border: 20 10% 88%;
+  --sidebar-primary: 355 43% 32%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 20 10% 92%;
+  --sidebar-accent-foreground: 0 0% 15%;
+  --sidebar-ring: 355 43% 32%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  --popover-border: 20 10% 88%;
+  
+  /* Primary - Wine/Vinho #722F37 */
+  --primary: 355 43% 32%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary - Burnt Rose/Rosa Queimado #C08081 */
+  --secondary: 359 30% 63%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Muted */
+  --muted: 20 10% 93%;
+  --muted-foreground: 0 0% 45%;
+  
+  /* Accent - Warm Neutral */
+  --accent: 20 8% 55%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Destructive */
+  --destructive: 0 84% 40%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Success - Green #28A745 */
+  --success: 134 61% 41%;
+  --success-foreground: 0 0% 100%;
+  
+  /* Warning */
+  --warning: 45 93% 47%;
+  --warning-foreground: 0 0% 15%;
+  
+  /* Input */
+  --input: 20 10% 83%;
+  
+  /* Ring */
+  --ring: 355 43% 32%;
+  
+  /* Charts */
+  --chart-1: 355 43% 32%;
+  --chart-2: 359 30% 63%;
+  --chart-3: 134 61% 41%;
+  --chart-4: 45 93% 47%;
+  --chart-5: 20 8% 55%;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  
+  /* Spacing */
+  --radius: 0.5rem;
+  --spacing: 0.25rem;
+  
+  /* Shadows */
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.08), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow: 0px 2px 8px 0px hsl(0 0% 0% / 0.08);
+  --shadow-md: 0px 4px 12px -2px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 8px 24px -4px hsl(0 0% 0% / 0.12);
+  --shadow-xl: 0px 16px 48px -8px hsl(0 0% 0% / 0.15);
+  --shadow-2xl: 0px 24px 64px -12px hsl(0 0% 0% / 0.20);
+  --tracking-normal: 0em;
+
+  /* Border colors - fallbacks */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+/* DARK MODE */
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+  
+  /* Background & Foreground - Dark neutral */
+  --background: 20 10% 10%;
+  --foreground: 0 0% 95%;
+  
+  /* Border */
+  --border: 20 8% 20%;
+  
+  /* Card */
+  --card: 20 10% 13%;
+  --card-foreground: 0 0% 95%;
+  --card-border: 20 8% 18%;
+  
+  /* Sidebar - Dark neutral with wine accent */
+  --sidebar: 20 10% 11%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-border: 20 8% 18%;
+  --sidebar-primary: 355 45% 42%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 20 8% 18%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-ring: 355 45% 42%;
+  
+  /* Popover */
+  --popover: 20 10% 15%;
+  --popover-foreground: 0 0% 95%;
+  --popover-border: 20 8% 20%;
+  
+  /* Primary - Wine/Vinho */
+  --primary: 355 45% 42%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary - Burnt Rose/Rosa Queimado */
+  --secondary: 359 35% 68%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Muted */
+  --muted: 20 8% 18%;
+  --muted-foreground: 0 0% 60%;
+  
+  /* Accent */
+  --accent: 20 6% 60%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Destructive */
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Success */
+  --success: 134 61% 50%;
+  --success-foreground: 0 0% 100%;
+  
+  /* Warning */
+  --warning: 45 93% 55%;
+  --warning-foreground: 0 0% 15%;
+  
+  /* Input */
+  --input: 20 8% 25%;
+  
+  /* Ring */
+  --ring: 355 45% 42%;
+  
+  /* Charts */
+  --chart-1: 355 45% 50%;
+  --chart-2: 359 35% 70%;
+  --chart-3: 134 61% 55%;
+  --chart-4: 45 93% 60%;
+  --chart-5: 20 6% 65%;
+  
+  /* Shadows */
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.08);
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.12), 0px 1px 2px -1px hsl(0 0% 0% / 0.08);
+  --shadow: 0px 2px 8px 0px hsl(0 0% 0% / 0.12);
+  --shadow-md: 0px 4px 12px -2px hsl(0 0% 0% / 0.15);
+  --shadow-lg: 0px 8px 24px -4px hsl(0 0% 0% / 0.18);
+  --shadow-xl: 0px 16px 48px -8px hsl(0 0% 0% / 0.22);
+  --shadow-2xl: 0px 24px 64px -12px hsl(0 0% 0% / 0.28);
+  
+  /* Border colors - fallbacks */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Scrollbar Styling */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* Escape hatches */
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  /* Toggle elevation system */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Hover/Active elevation system */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Gradient for landing and login page - Wine to Burnt Rose */
+.gradient-medical {
+  background: linear-gradient(135deg, hsl(355 43% 32%) 0%, hsl(359 30% 63%) 100%);
+}
+
+/* Landing page gradient background */
+.gradient-wine {
+  background: linear-gradient(135deg, hsl(355 43% 28%) 0%, hsl(345 35% 18%) 50%, hsl(355 40% 25%) 100%);
+}
+
+.gradient-wine-rose {
+  background: linear-gradient(180deg, hsl(355 43% 32%) 0%, hsl(359 30% 55%) 100%);
+}
+
+/* Tooth styling for odontogram */
+.tooth {
+  transition: all 0.2s ease;
+}
+
+.tooth:hover {
+  transform: scale(1.05);
+}
+
+.tooth.selected {
+  filter: drop-shadow(0 0 4px hsl(var(--primary)));
+}
+
+/* Hero background animations - lightweight CSS-based */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.05); }
+}
+
+@keyframes float-slow-reverse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.05); }
+}
+
+@keyframes pulse-slow-hero {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes float-particle {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: float-slow-reverse 25s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow-hero 8s ease-in-out infinite;
+}
+
+.animate-float-particle {
+  animation: float-particle 20s linear infinite;
+}
