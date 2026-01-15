@@ -44,6 +44,34 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+1️⃣ Mate o PM2 que está rodando como root
+sudo pm2 kill
+
+
+Confirme:
+
+sudo pm2 status
+
+
+(deve não listar nada)
+
+2️⃣ Ajuste dono e permissão do projeto
+sudo chown -R ubuntu:ubuntu /var/www/odonto-ramalho
+sudo chmod -R 755 /var/www/odonto-ramalho
+
+
+Garanta que exista:
+
+mkdir -p /var/www/odonto-ramalho/logs
+
+3️⃣ Logue como ubuntu (sem sudo)
+
+Se já estiver como ubuntu, siga direto.
+
+Suba o PM2 SEM sudo:
+
+pm2 start ecosystem.config.cjs --env production
+
 # Parar aplicação anterior
 echo "[7/7] Iniciando com PM2..."
 pm2 delete odonto-ramalho 2>/dev/null || true
